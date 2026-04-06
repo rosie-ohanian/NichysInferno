@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 8170bd1175de02446a891aaf8670a414
+guid: ca5e9202d518b3f45896ad3096e0021d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5668006410137102136
-    second: Soph_0
+      213: -1447175127033458355
+    second: blinkySoph_0
   - first:
-      213: -3028057604273897449
-    second: Soph_1
+      213: 3215740851404368758
+    second: blinkySoph_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,7 +103,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Soph_0
+      name: blinkySoph_0
       rect:
         serializedVersion: 2
         x: 23
@@ -117,20 +117,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8c8142b43323751b0800000000000000
-      internalID: -5668006410137102136
+      spriteID: d41d361b3e99aebe0800000000000000
+      internalID: -1447175127033458355
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soph_1
+      name: blinkySoph_1
       rect:
         serializedVersion: 2
-        x: 239
-        y: 167
-        width: 17
-        height: 89
+        x: 264
+        y: 0
+        width: 178
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -138,8 +138,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 71085d9f6ad2af5d0800000000000000
-      internalID: -3028057604273897449
+      spriteID: 67b6ba1444b90ac20800000000000000
+      internalID: 3215740851404368758
       vertices: []
       indices: 
       edges: []
@@ -154,9 +154,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Soph_0: -5668006410137102136
-      Soph_1: -3028057604273897449
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
