@@ -19,8 +19,9 @@ public class playerControle : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        /*
         if (Input.GetKey(KeyCode.RightArrow))
         {
             player.velocityX = speed;
@@ -51,6 +52,19 @@ public class playerControle : MonoBehaviour
         { 
             player.velocityY = jump;
         }
+        */
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
+        {
+            player.AddForce(new Vector2(speed, 0));
+        }
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+        {
+            player.AddForce(new Vector2(-speed, 0));
+        }
+        if (player.IsTouching(groundCollider) && (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.W)))
+        {
+            player.AddForce(new Vector2(0, jump), ForceMode2D.Impulse);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D c)
@@ -59,6 +73,10 @@ public class playerControle : MonoBehaviour
         if (c.gameObject.tag.Equals("hazard")) 
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+
+        if (c.gameObject.tag.Equals("ground")){
+
         }
     }
 }
