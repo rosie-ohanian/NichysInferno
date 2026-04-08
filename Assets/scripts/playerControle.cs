@@ -11,72 +11,54 @@ public class playerControle : MonoBehaviour
     public float speed;
     public float jump;
     public Collider2D groundCollider;
+    private float horizontal;
+    private bool touchingGround = true;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        /*
-        if (Input.GetKey(KeyCode.RightArrow))
+        horizontal = Input.GetAxisRaw("Horizontal");
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.UpArrow)) && touchingGround)
         {
-            player.velocityX = speed;
-        } else if(player.velocityX > 0) 
-        {
-            player.velocityX -= 1;
-
-            if(player.velocityX < 0)
-            {
-                player.velocityX = 0;
-            }
-        }
-
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            player.velocityX = -speed;
-        } else if (player.velocityX < 0)
-        {
-            player.velocityX += 1;
-
-            if (player.velocityX > 0)
-            {
-                player.velocityX = 0;
-            }
-        }
-
-        if (Input.GetKeyDown(KeyCode.UpArrow) && player.IsTouching(groundCollider)) 
-        { 
-            player.velocityY = jump;
-        }
-        */
-        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
-        {
-            player.AddForce(new Vector2(speed, 0));
-        }
-        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
-        {
-            player.AddForce(new Vector2(-speed, 0));
-        }
-        if (player.IsTouching(groundCollider) && (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.W)))
-        {
-            player.AddForce(new Vector2(0, jump), ForceMode2D.Impulse);
+            Debug.Log("JUMPPPPPPPPPPPPPPPPPPPPPP");
+            player.velocity = new Vector2(player.velocity.y, jump);
+            touchingGround = false;
         }
     }
-
+    private void FixedUpdate()
+    {
+        // Apply horizontal movement to Rigidbody velocity
+        player.velocity = new Vector2(horizontal * speed, player.velocity.y);
+    }
     void OnCollisionEnter2D(Collision2D c)
     {
         Debug.Log(c.gameObject.tag);
-        if (c.gameObject.tag.Equals("hazard")) 
+        if (c.gameObject.tag.Equals("hazard"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
-        if (c.gameObject.tag.Equals("ground")){
+    }
 
+    void OnCollisionStay2D(Collision2D c)
+    {
+        if (c.gameObject.CompareTag("ground"))
+        {
+            foreach (ContactPoint2D contact in c.contacts)
+            {
+                if (contact.normal.y >= 0.9f)
+                {
+                    touchingGround = true;
+                    break;
+                }
+            }
         }
     }
 }
+
