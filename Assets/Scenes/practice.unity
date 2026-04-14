@@ -2010,8 +2010,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1272682465}
-  speed: 3
-  jump: 7
+  speed: 5
+  jump: 5
   groundCollider: {fileID: 634880691}
 --- !u!4 &1272682469
 Transform:
