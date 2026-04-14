@@ -24,7 +24,7 @@ public class playerControle : MonoBehaviour
     void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
-        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.UpArrow)) && touchingGround)
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && touchingGround)
         {
             Debug.Log("JUMPPPPPPPPPPPPPPPPPPPPPP");
             player.velocity = new Vector2(player.velocity.y, jump);
@@ -41,6 +41,7 @@ public class playerControle : MonoBehaviour
         Debug.Log(c.gameObject.tag);
         if (c.gameObject.tag.Equals("hazard"))
         {
+            Debug.Log("qwehrgkwr");
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
