@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 6965f2c3e0d6e0543b922808be949089
+guid: 73a9a7b35cbb7314faf0acaca9303785
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5668006410137102136
-    second: Soph_0
-  - first:
-      213: -3028057604273897449
-    second: Soph_1
+      213: 5865670524570963042
+    second: block_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,43 +100,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Soph_0
+      name: block_0
       rect:
         serializedVersion: 2
-        x: 23
+        x: 0
         y: 0
-        width: 178
-        height: 249
+        width: 256
+        height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8c8142b43323751b0800000000000000
-      internalID: -5668006410137102136
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Soph_1
-      rect:
-        serializedVersion: 2
-        x: 239
-        y: 167
-        width: 17
-        height: 89
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 71085d9f6ad2af5d0800000000000000
-      internalID: -3028057604273897449
+      spriteID: 26c0882b34c076150800000000000000
+      internalID: 5865670524570963042
       vertices: []
       indices: 
       edges: []
@@ -147,7 +123,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d35a89e95ab791242b70206c2e1c4d11
     internalID: 0
     vertices: []
     indices: 
@@ -155,8 +131,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Soph_0: -5668006410137102136
-      Soph_1: -3028057604273897449
+      block_0: 5865670524570963042
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
