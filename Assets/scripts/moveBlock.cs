@@ -8,7 +8,7 @@ public class moveBlock : MonoBehaviour
     public GameObject leftBoundrie;
     public GameObject rightBoundrie;
     public bool startRight;
-    public Collider2D block;
+    public Rigidbody2D block;
     public int speed;
     private float move;
 
@@ -16,27 +16,28 @@ public class moveBlock : MonoBehaviour
     void Start()
     {
         if (startRight) {
-            move = (speed / 1000f);
+            move = speed;
         } else
         {
-            move = -(speed / 1000f);
+            move = -speed;
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        block.transform.position = new Vector3(block.transform.position.x + move, block.transform.position.y, 0);
+        block.velocityX = move;
+        //block.transform.position = new Vector3(block.transform.position.x + move, block.transform.position.y, 0);
     }
 
     void OnTriggerEnter2D(Collider2D c)
     {
         if (c.gameObject.Equals(rightBoundrie) && (move > 0)) {
-            move = -(speed / 1000f);
+            move = -speed;
         }
         if (c.gameObject.Equals(leftBoundrie) && (move < 0))
         {
-            move = (speed / 1000f);
+            move = speed;
         }
     }
 }
