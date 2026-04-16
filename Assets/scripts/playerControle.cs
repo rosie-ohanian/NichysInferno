@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
-using UnityEngine.SceneManagement;
 
 public class playerControle : MonoBehaviour
 {
@@ -45,6 +44,12 @@ public class playerControle : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
+        if (c.gameObject.CompareTag("movingGround"))
+        {
+            float other = c.relativeVelocity.x;
+            Debug.Log(other);
+            player.velocity = new Vector2(player.velocity.x + other, player.velocity.y);
+        }
     }
 
     void OnCollisionStay2D(Collision2D c)

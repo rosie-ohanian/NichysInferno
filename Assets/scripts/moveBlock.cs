@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class moveBlock : MonoBehaviour
@@ -26,7 +27,6 @@ public class moveBlock : MonoBehaviour
     void Update()
     {
         block.transform.position = new Vector3(block.transform.position.x + move, block.transform.position.y, 0);
-        
     }
 
     void OnTriggerEnter2D(Collider2D c)
