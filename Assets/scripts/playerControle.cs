@@ -9,9 +9,10 @@ public class playerControle : MonoBehaviour
     public Rigidbody2D player;
     public float speed;
     public float jump;
-    public Collider2D groundCollider;
+    //public Collider2D groundCollider;
     private float horizontal;
     private bool touchingGround = true;
+    private float boost = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +34,8 @@ public class playerControle : MonoBehaviour
     private void FixedUpdate()
     {
         // Apply horizontal movement to Rigidbody velocity
-        player.velocity = new Vector2(horizontal * speed, player.velocity.y);
+        player.velocity = new Vector2(horizontal * speed + boost, player.velocity.y);
+        boost = 0;
     }
     void OnCollisionEnter2D(Collision2D c)
     {
@@ -42,13 +44,6 @@ public class playerControle : MonoBehaviour
         {
             Debug.Log("qwehrgkwr");
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
-
-        if (c.gameObject.CompareTag("movingGround"))
-        {
-            float other = c.relativeVelocity.x;
-            Debug.Log(other);
-            player.velocity = new Vector2(player.velocity.x + other, player.velocity.y);
         }
     }
 
@@ -64,6 +59,14 @@ public class playerControle : MonoBehaviour
                     break;
                 }
             }
+        }
+
+        if (c.gameObject.CompareTag("movingGround"))
+        {
+            //Debug.Log(c.rigidbody);
+            //Debug.Log(c.rigidbody.velocity);
+            boost = c.rigidbody.velocity.x;
+            Debug.Log(boost);
         }
     }
 }
