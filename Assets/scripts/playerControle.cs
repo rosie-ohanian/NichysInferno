@@ -13,11 +13,14 @@ public class playerControle : MonoBehaviour
     private float horizontal;
     private bool touchingGround = true;
     private float boost = 0;
+    private float startX;
+    private float startY;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        startX = transform.position.x;
+        startY = transform.position.y;
     }
 
     // Update is called once per frame
@@ -42,7 +45,6 @@ public class playerControle : MonoBehaviour
         Debug.Log(c.gameObject.tag);
         if (c.gameObject.tag.Equals("hazard"))
         {
-            Debug.Log("qwehrgkwr");
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
