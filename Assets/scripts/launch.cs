@@ -6,21 +6,23 @@ using UnityEngine;
 public class launch : MonoBehaviour
 {
     public float rate;
-    public float speed;
-    public float range;
     private float timer;
-    private GameObject projectile;
+    public GameObject projectile;
+    private float t;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        t = 60 / rate;
+        timer = 0;
+        Instantiate(projectile, transform.position, transform.rotation);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (timer < rate)
+        Debug.Log(timer);
+        if (timer < t)
         {
             timer += Time.deltaTime;
         }
@@ -33,7 +35,6 @@ public class launch : MonoBehaviour
 
     void create()
     {
-        float point = transform.position.y + Random.Range(-1 * distance, distance);
-        Instantiate(pipe, new Vector3(transform.position.x, point, transform.position.z), transform.rotation);
+        Instantiate(projectile, transform.position, transform.rotation);
     }
 }
