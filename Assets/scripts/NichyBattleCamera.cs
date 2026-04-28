@@ -8,9 +8,13 @@ public class NichyBattleCamera : MonoBehaviour
 {
     public Camera Camera;
     public RectTransform panel;
+    public Transform level;
     public Rigidbody2D player;
-    public float speed;
-    private Vector3 pos;
+    public float panelspeed;
+    public float levelspeed;
+    public float yspeed;
+    private Vector3 ypos;
+    private float xpos;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,9 +24,11 @@ public class NichyBattleCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        pos = Vector3.up * speed * Time.deltaTime;
-        Camera.transform.Translate(pos * (2 * (Camera.transform.InverseTransformPoint(player.transform.position).y + Camera.orthographicSize+5)/(Camera.orthographicSize * 2f)));
-        panel.transform.Translate(pos * (-2 * (Camera.transform.InverseTransformPoint(player.transform.position).y + Camera.orthographicSize+5) / (Camera.orthographicSize * 2f)));
-
+        ypos = (Vector3.up * yspeed * Time.deltaTime * (2 * (Camera.transform.InverseTransformPoint(player.transform.position).y + Camera.orthographicSize + 5) / (Camera.orthographicSize * 2f)));
+        Camera.transform.Translate(ypos);
+        panel.transform.Translate(-ypos);
+        xpos = -(Camera.transform.InverseTransformPoint(player.transform.position).x / (Camera.orthographicSize * 2));
+        panel.anchoredPosition = new Vector2(xpos / panelspeed, panel.anchoredPosition.y);
+        level.position = new Vector2(xpos / levelspeed, level.position.y);
     }
 }
