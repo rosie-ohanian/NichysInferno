@@ -16,10 +16,12 @@ public class playerControle : MonoBehaviour
     private float boost = 0;
     private float startX;
     private float startY;
+    private GameObject controler;
 
     // Start is called before the first frame update
     void Start()
     {
+        controler = GameObject.FindGameObjectWithTag("GameController");
         startX = transform.position.x;
         startY = transform.position.y;
     }
@@ -46,7 +48,14 @@ public class playerControle : MonoBehaviour
         //Debug.Log(c.gameObject.tag);
         if (c.gameObject.tag.Equals("hazard"))
         {
+            print(controler.GetComponent<control>().die());
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            /*
+            else
+            {
+                SceneManager.LoadScene(SceneManager.GetSceneByName("gameOver").buildIndex);
+            }
+            */
         }
     }
 

@@ -21,7 +21,6 @@ public class launch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(timer);
         if (timer < t)
         {
             timer += Time.deltaTime;

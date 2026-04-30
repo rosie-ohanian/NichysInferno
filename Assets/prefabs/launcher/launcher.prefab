@@ -99,5 +99,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 739cc483b30edfe4985057ad32a0afec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rate: 15
+  rate: 30
   projectile: {fileID: 2462123541416029784, guid: d423abff0a876ec448cc3905212a9a92, type: 3}
