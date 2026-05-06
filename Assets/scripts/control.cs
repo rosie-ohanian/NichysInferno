@@ -5,16 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class control : MonoBehaviour
 {
-    private string currentScene = "practice";
+    public int levelsStart;
+    public int gameOver;
     private int lives = 1;
 
     void Start()
     {
         DontDestroyOnLoad(gameObject);
-        SceneManager.LoadScene(currentScene);
+        SceneManager.LoadScene(levelsStart);
     }
 
-    public bool die()
+    public void die()
     {
         Debug.Log("you died");
         lives = lives - 1;
@@ -24,10 +25,11 @@ public class control : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         } else
         {
+            int next = gameOver;
+            Debug.Log(next);
+            SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
             Debug.Log("game over");
-            SceneManager.LoadScene("gameOver");
+            SceneManager.LoadScene(next);
         }
-        print(lives);
-        return lives >= 0;
     }
 }

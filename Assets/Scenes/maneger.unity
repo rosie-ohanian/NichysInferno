@@ -165,6 +165,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0904547e1b8f8cb4eb65bade0529ea20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelsStart: 2
+  gameOver: 1
 --- !u!1 &188407473
 GameObject:
   m_ObjectHideFlags: 0

@@ -23,6 +23,7 @@ public class nextLevel : MonoBehaviour
         if(collision.tag.Equals("Player"))
         {
             Debug.Log("end");
+            Debug.Log(SceneManager.GetSceneByBuildIndex(SceneManager.GetActiveScene().buildIndex + 1).name);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }

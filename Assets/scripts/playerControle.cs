@@ -48,14 +48,7 @@ public class playerControle : MonoBehaviour
         //Debug.Log(c.gameObject.tag);
         if (c.gameObject.tag.Equals("hazard"))
         {
-            print(controler.GetComponent<control>().die());
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            /*
-            else
-            {
-                SceneManager.LoadScene(SceneManager.GetSceneByName("gameOver").buildIndex);
-            }
-            */
+            controler.GetComponent<control>().die();
         }
     }
 
