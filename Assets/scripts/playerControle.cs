@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
@@ -13,11 +14,16 @@ public class playerControle : MonoBehaviour
     private float horizontal;
     private bool touchingGround = true;
     private float boost = 0;
+    private float startX;
+    private float startY;
+    private GameObject controler;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        controler = GameObject.FindGameObjectWithTag("GameController");
+        startX = transform.position.x;
+        startY = transform.position.y;
     }
 
     // Update is called once per frame
@@ -26,7 +32,7 @@ public class playerControle : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && touchingGround)
         {
-            Debug.Log("JUMPPPPPPPPPPPPPPPPPPPPPP");
+            //Debug.Log("JUMPPPPPPPPPPPPPPPPPPPPPP");
             player.velocity = new Vector2(player.velocity.y, jump);
             touchingGround = false;
         }
@@ -39,11 +45,10 @@ public class playerControle : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D c)
     {
-        Debug.Log(c.gameObject.tag);
+        //Debug.Log(c.gameObject.tag);
         if (c.gameObject.tag.Equals("hazard"))
         {
-            Debug.Log("qwehrgkwr");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            controler.GetComponent<control>().die();
         }
     }
 
@@ -66,7 +71,7 @@ public class playerControle : MonoBehaviour
             //Debug.Log(c.rigidbody);
             //Debug.Log(c.rigidbody.velocity);
             boost = c.rigidbody.velocity.x;
-            Debug.Log(boost);
+            //Debug.Log(boost);
         }
     }
 }

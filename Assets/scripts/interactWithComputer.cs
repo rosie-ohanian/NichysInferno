@@ -1,10 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class nextLevel : MonoBehaviour
+public class interactWithComputer : MonoBehaviour
 {
+    public GameObject wall;
+    private Boolean active;
 
     // Start is called before the first frame update
     void Start()
@@ -20,11 +22,10 @@ public class nextLevel : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag.Equals("Player"))
+        if (collision.tag.Equals("Player"))
         {
-            Debug.Log("end");
-            Debug.Log(SceneManager.GetSceneByBuildIndex(SceneManager.GetActiveScene().buildIndex + 1).name);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            active = true;
+            wall.SetActive(false);
         }
     }
 }
