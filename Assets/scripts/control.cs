@@ -8,9 +8,13 @@ public class control : MonoBehaviour
     public int levelsStart;
     public int gameOver;
     private int lives = 1;
+    public AudioClip[] music;
+    private int m;
+    public AudioSource play;
 
     void Start()
     {
+        m = 1;
         DontDestroyOnLoad(gameObject);
         SceneManager.LoadScene(levelsStart);
     }
@@ -31,5 +35,11 @@ public class control : MonoBehaviour
             Debug.Log("game over");
             SceneManager.LoadScene(next);
         }
+    }
+
+    public void nextMusic()
+    {
+        play.clip = music[m++];
+        play.Play();
     }
 }
