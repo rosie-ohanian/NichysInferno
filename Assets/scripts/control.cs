@@ -7,7 +7,7 @@ public class control : MonoBehaviour
 {
     public int levelsStart;
     public int gameOver;
-    private int lives = 1;
+    public int lives = 1;
 
     void Start()
     {

@@ -112,8 +112,10 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: -4, y: -16}
-        - {x: 3, y: -16}
+      - - {x: -4, y: -10}
+        - {x: -13, y: -16}
+        - {x: 12, y: -16}
+        - {x: 3, y: -10}
         - {x: 3, y: 5}
         - {x: -4, y: 5}
       tessellationDetail: 0

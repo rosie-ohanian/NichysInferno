@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BossBattleBG_0: -5607282885394050751
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

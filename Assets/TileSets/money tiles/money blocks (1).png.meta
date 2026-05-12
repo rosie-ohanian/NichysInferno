@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8914afe378519614a8ada3878686bff9
+guid: fbfadc9219f94a0479b015f90c8246ae
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6665356834582444394
-    second: New Piskel (9)_0
+      213: 8582936987745911733
+    second: money blocks (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,28 +100,97 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: New Piskel (9)_0
+      name: money blocks (1)_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 0
-        width: 29
+        x: 32
+        y: 224
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: 3.5, y: -10}
-        - {x: 1.5, y: 6}
-        - {x: -3.5, y: 6}
-        - {x: -4.5, y: -10}
-        - {x: -11.5, y: -16}
-        - {x: 9.5, y: -16}
+      - - {x: 5, y: -11}
+        - {x: 5, y: 6}
+        - {x: -4, y: 6}
+        - {x: -4, y: -11}
+        - {x: -15, y: -16}
+        - {x: 15, y: -16}
       tessellationDetail: 0
       bones: []
-      spriteID: 696cd750645ef73a0800000000000000
-      internalID: -6665356834582444394
+      spriteID: 5b3082c47b7bc1770800000000000000
+      internalID: 8582936987745911733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: money blocks (1)_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: -13}
+        - {x: 0, y: -8}
+        - {x: -2, y: -8}
+        - {x: -5, y: -13}
+        - {x: -10, y: -16}
+        - {x: 10, y: -16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 758fa0dc04c75d8459ba2a09a39868d5
+      internalID: 80748872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: money blocks (1)_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14322e8112ca537499a5a383e9eee24e
+      internalID: 193554495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: money blocks (1)_3
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d99dd8039bf35c94f9f791e019343650
+      internalID: 548950466
       vertices: []
       indices: 
       edges: []
@@ -129,7 +198,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 1e4a89f99e630ed4a9e2be9c2b3b07c0
+    spriteID: 550fd66fdec08ee4db2894b12b90af4d
     internalID: 0
     vertices: []
     indices: 
@@ -137,7 +206,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      New Piskel (9)_0: -6665356834582444394
+      money blocks (1)_0: 8582936987745911733
+      money blocks (1)_1: 80748872
+      money blocks (1)_2: 193554495
+      money blocks (1)_3: 548950466
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
