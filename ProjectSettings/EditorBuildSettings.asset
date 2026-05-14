@@ -12,10 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/gameOver.unity
     guid: d88e229cb17a71e45a04f79285a8af68
   - enabled: 1
-    path: Assets/Scenes/practice.unity
-    guid: 53c0ef4274d0dbc42a6133f74a049f49
-  - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/bossbattle.unity
+    guid: 39f5a957d1f63b74088e312f80656192
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

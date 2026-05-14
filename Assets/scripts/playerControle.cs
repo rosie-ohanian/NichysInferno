@@ -8,6 +8,9 @@ using UnityEngine.UIElements;
 public class playerControle : MonoBehaviour
 {
     public Rigidbody2D player;
+    public SpriteRenderer dude;
+    public Sprite standing;
+    public Sprite jumping;
     public float speed;
     public float jump;
     //public Collider2D groundCollider;
@@ -36,11 +39,22 @@ public class playerControle : MonoBehaviour
             player.velocity = new Vector2(player.velocity.y, jump);
             touchingGround = false;
         }
+        if (touchingGround)
+        {
+            dude.sprite = standing;
+        } else
+        {
+            dude.sprite = jumping;
+        }
     }
     private void FixedUpdate()
     {
         // Apply horizontal movement to Rigidbody velocity
         player.velocity = new Vector2(horizontal * speed + boost, player.velocity.y);
+        if (player.velocity.x != 0)
+        {
+            dude.flipX = player.velocity.x < 0;
+        }
         boost = 0;
     }
     void OnCollisionEnter2D(Collision2D c)
@@ -52,10 +66,12 @@ public class playerControle : MonoBehaviour
         }
     }
 
+
     void OnCollisionStay2D(Collision2D c)
     {
         if (c.gameObject.CompareTag("ground"))
         {
+
             foreach (ContactPoint2D contact in c.contacts)
             {
                 if (contact.normal.y >= 0.9f)

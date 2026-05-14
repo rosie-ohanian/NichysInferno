@@ -29,6 +29,6 @@ public class NichyBattleCamera : MonoBehaviour
         panel.transform.Translate(-ypos);
         xpos = (Camera.transform.InverseTransformPoint(player.transform.position).x / (Camera.orthographicSize * 2));
         panel.anchoredPosition = new Vector2(-(xpos / panelspeed), panel.anchoredPosition.y);
-        Camera.transform.position = new Vector2(xpos / levelspeed, Camera.transform.position.y);
+        Camera.transform.position = new Vector3(xpos / levelspeed, Camera.transform.position.y, -10);
     }
 }
