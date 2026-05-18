@@ -1,9 +1,10 @@
 fileFormatVersion: 2
+guid: d373d21af8ea19c4c99fd98ba1e8ffe4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4565668472430567527
-    second: 63540698efdd9633f5ace1a58b40188f_0
+      213: -2032827832280411460
+    second: podium_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -99,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 63540698efdd9633f5ace1a58b40188f_0
+      name: podium_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1920
-        height: 1200
+        width: 896
+        height: 589
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -113,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 760ac6529438c5f30800000000000000
-      internalID: 4565668472430567527
+      spriteID: cb2166f5bd1f9c3e0800000000000000
+      internalID: -2032827832280411460
       vertices: []
       indices: 
       edges: []
