@@ -167,6 +167,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelsStart: 2
   gameOver: 1
+  music:
+  - {fileID: 8300000, guid: 0eb3da58c09b7524a8bbbb3af9ea5b9e, type: 3}
+  - {fileID: 8300000, guid: 42710aa11ed8d6f4ba5aed5a0cb3b2f4, type: 3}
+  play: {fileID: 188407474}
 --- !u!1 &188407473
 GameObject:
   m_ObjectHideFlags: 0
